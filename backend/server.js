@@ -5,8 +5,12 @@
  * Last Modified_by: 
  */
 
+// 
 const express = require('express');
+
 const mongoose = require('mongoose');
+
+const routes = require('./routes/ToDoRoute')
 
 require('dotenv').config();
 
@@ -20,5 +24,6 @@ mongoose
 .then(()=> console.log(`Connected to MongoDb`))
 .catch((err) => console.log(err));
 
+app. use(routes);
 
 app.listen(PORT, ()=> console.log(`Listen on: ${PORT}`));
