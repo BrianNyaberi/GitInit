@@ -12,10 +12,15 @@ const mongoose = require('mongoose');
 
 const routes = require('./routes/ToDoRoute')
 
+const cors = require('cors');
+
 require('dotenv').config();
 
 const app = express();
 const PORT = process.env.port || 5000; 
+
+app.use(express.json());
+app.use(cors());
 
 // Connect to DB
 mongoose
