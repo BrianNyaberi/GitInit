@@ -6,17 +6,12 @@
  */
 
 const {Router} = require('express');
+const { getToDo } = require('../controllers/controller');
 
 const router = Router();
 
-router.get('/', (req, res) => {
-    res.json({message: "Hi there"})
-});
+router.get('/', getToDo);
 
-
-router.get('/herb', (req, res) => {
-    res.json({message: "Twende kwa vic, ndio upate herb"})
-});
 
 module.exports = router;
 
