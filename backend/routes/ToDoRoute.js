@@ -11,8 +11,9 @@ const { getToDo, saveToDo } = require('../controllers/controller');
 const router = Router();
 
 router.get('/', getToDo);
-
 router.post('/save', saveToDo);
+router.post('/update', updateToDo);
+router.post('/delete', deleteToDo);
  
 module.exports = router;
 
