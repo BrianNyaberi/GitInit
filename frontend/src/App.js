@@ -5,6 +5,10 @@ function App() {
         <h1>ToDo App</h1>
         <div className="top">
           <input type="text" placeholder="Add ToDos..."></input>
+          <div className="add">Add</div>
+        </div>
+        <div className="list">
+          
         </div>
       </div>
     </div>
