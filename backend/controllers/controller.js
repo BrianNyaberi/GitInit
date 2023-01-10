@@ -12,16 +12,17 @@ module.exports.getToDo = async (req, res) => {
     res.send(toDo)
 }
 
-module.exports.saveToDo = async (req, res) => {
-    const { text} = req.body();
+module.exports.saveToDo = (req, res) => {
+    const { text} = req.body;
 
     ToDoModel
-    .create({text})
+    .create({ text })
     .then((data) => {
         console.log("Todo item added sucessfully.")
         console.log(data)
-        res.send(toDo)
+        res.send(data)
     })
+    .catch((err) => console.log(err));
 }
 
 module.exports.updateToDo = async (req, res) => {
