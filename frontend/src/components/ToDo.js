@@ -1,5 +1,12 @@
 import React from 'react'
 
+/**
+ * Created_by: Brian Nyaberi
+ * Created_date: 11-Jan-2023
+ * About: Frontend react ToDo app
+ * Last Modified_by: 
+ */
+
 const ToDo = ({text, updateMode, deleteToDo}) => {
   return (
     <div className="todo">
