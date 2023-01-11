@@ -12,20 +12,21 @@ module.exports.getToDo = async (req, res) => {
     res.send(toDo)
 }
 
-module.exports.saveToDo = async (req, res) => {
-    const { text} = req.body();
+module.exports.saveToDo = (req, res) => {
+    const { text} = req.body;
 
     ToDoModel
-    .create({text})
+    .create({ text })
     .then((data) => {
         console.log("Todo item added sucessfully.")
         console.log(data)
-        res.send(toDo)
+        res.send(data)
     })
+    .catch((err) => console.log(err));
 }
 
 module.exports.updateToDo = async (req, res) => {
-    const {_id, text} = req.body();
+    const {_id, text} = req.body;
     ToDoModel
     .findByIdAndUpdate(_id, {text})
     .then(() => res.send("Todo item updtaded sucessfully."))
@@ -33,7 +34,7 @@ module.exports.updateToDo = async (req, res) => {
 }
 
 module.exports.deleteToDo = async (req, res) => {
-    const {_id} = req.body();
+    const {_id} = req.body;
     ToDoModel
     .findByIdAndDelete(_id)
     .then(() => res.send("Todo item deleted sucessfully."))

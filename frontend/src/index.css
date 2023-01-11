@@ -1,3 +1,10 @@
+/**
+ * Created_by: Brian Nyaberi
+ * Created_date: 11-Jan-2023
+ * About: Frontend react ToDo app
+ * Last Modified_by: 
+ */
+
 * {
   margin: 0;
   padding: 0;
@@ -43,5 +50,19 @@ input{
   color: #fff;
   padding: 0.5rem 1.5rem;
   cursor: pointer;
+}
+
+.icons{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.icon{
+  cursor: pointer;
+  font-size: 20px;
 }
  

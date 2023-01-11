@@ -1,3 +1,10 @@
+/**
+ * Created_by: Brian Nyaberi
+ * Created_date: 11-Jan-2023
+ * About: Frontend react ToDo app
+ * Last Modified_by: 
+ */
+
 function App() {
   return (
     <div className="App">
