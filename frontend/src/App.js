@@ -5,6 +5,8 @@
  * Last Modified_by: 
  */
 
+import ToDo from "./components/ToDo";
+
 function App() {
   return (
     <div className="App">
@@ -15,7 +17,7 @@ function App() {
           <div className="add">Add</div>
         </div>
         <div className="list">
-          
+          <ToDo text="Hi" />
         </div>
       </div>
     </div>
