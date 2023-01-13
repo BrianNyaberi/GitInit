@@ -10,7 +10,9 @@ import ToDo from "./components/ToDo";
 import { getAllToDo } from "./utils/HandleApi";
 
 function App() {
+
   const [toDo, setToDo] = useState([])
+  // const [text, setText] = useState("")
 
   useEffect(() => {
     getAllToDo(setToDo)
